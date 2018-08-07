@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>VUEJS Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="road">
+            <div v-bind:style="{left: left + 'px'}" ref="roadrunner" class="roadrunner" v-bind:class="isRunning"></div>
+        </div>
+        <p v-if="!ended"><button v-on:click="startRunning(); playSound('beep.mp3');">Run!</button></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
