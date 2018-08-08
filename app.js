@@ -31,6 +31,12 @@ new Vue({
                 var audio = new Audio(file);
                 audio.play();
             }
+        },
+
+        restart: function(){
+            /** Reset position and finish reached */
+            this.left = 0;
+            this.ended = false;
         }
     },
     computed: {
